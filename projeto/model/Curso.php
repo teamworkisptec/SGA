@@ -17,7 +17,7 @@ class Curso
      * @param $nome
      * @param $id
      */
-    public function __construct($nome, $id, $departameno)
+    public function __construct($id, $nome, $departameno)
     {
         $this->nome = $nome;
         $this->id = $id;

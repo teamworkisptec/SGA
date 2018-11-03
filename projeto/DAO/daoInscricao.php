@@ -18,8 +18,18 @@ class daoInscricao {
             $stmt->bindparam(":telefone",$telefone);
             $stmt->bindparam(":id_curso",$id_curso);
             $stmt->execute();
+            ?>
+            <script>
+             alert("Sucesso !");
+            </script>
+            <?php
             return true;
         } catch (Exception $ex) {
+            ?>
+            <script>
+                alert("Erro :".<?php $ex->getMessage()?>);
+            </script>
+            <?php
             echo $ex->getMessage();
             return false;
         }

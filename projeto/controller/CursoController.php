@@ -21,7 +21,8 @@ class CursoController {
     
     public function todosCursos() {
         try{
-            $this->daocurso->selectAll();
+            $result= $this->daocurso->selectAll();
+            return $result;
         } catch (Exception $ex) {
             echo $ex->getMessage();
         }

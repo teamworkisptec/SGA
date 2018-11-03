@@ -62,21 +62,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<span></span>
 							</div>
 							<div class="styled-input agile-styled-input-top">
-								
-                                                                <select id="cursos" required="">
-                                                                    <option value="">Curso</option>
-                                                                       
-                                                                    <option value=<?php $c->getId();?>><?php $c->getNome();?></option>
-									<option value="">Eng. Civíl</option>
-									<option value="">Eng. Produção Industrial</option>
-									<option value="">Economia</option>
-									<option value="">Gestão de Empresas</option>
-									<option value="">Direito</option>
-                                                                           
-								</select>
-								<span></span>
+                                                            <select id="cursos" required="" name="Cursos">
+                                                                <option value="" selected="selected">    ----- </option>
+                                                                <?php foreach($cursos as $curso) {?>
+                                                                    <option value="<?php echo $curso->getId() ?>"><?php echo $curso->getNome(); ?></option>
+                                                                <?php } ?>
+                                                            </select>
+                                                            <span></span>   
 							</div>
-							</div>
+                                                    </div>
 						<input name="submit-inscricao" type="submit" value="Inscrever">
 					</form>
 				</div>

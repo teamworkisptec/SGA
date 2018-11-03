@@ -41,19 +41,12 @@ class Controller {
     }
     
     
-    public function inscricaoSubmit() {
-        if(isset($_POST['submit-inscricao'])){
-            $filterNome = filter_input(INPUT_POST, 'NomeCompleto'); 
-            $filterEmail = filter_input(INPUT_POST, 'Email'); 
-            $filterBi = filter_input(INPUT_POST, 'bi');
-            $filterTelefone = filter_input(INPUT_POST, 'Telefone'); 
-            $filterId_curso = filter_input(INPUT_POST, '');
-        }
-    }
+    
     
     public function viewInscricao() {
         try{
-            $c = $this->controllercursos->todosCursos();
+            $cursos = $this->controllercursos->todosCursos();
+            $this->controllerinscr->inscricaoSubmit();
             include_once 'view/inscricao.php';
         } catch (Exception $ex) {
             $ex->getMessage();
