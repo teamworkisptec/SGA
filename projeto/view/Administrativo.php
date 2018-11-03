@@ -16,6 +16,10 @@
                 </div>
                 <div class="left-custom-menu-adp-wrap comment-scrollbar" style="margin-top: 20%;">
                     <nav class="sidebar-nav left-sidebar-menu-pro">
+                        <ul class="metismenu">
+                            
+                        </ul>
+                        
                         <ul class="metismenu" id="menu1">
                             <li>
                                 <a title="Inscritos" class="nav-link" id="Inscritos-tab" 

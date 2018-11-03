@@ -11,16 +11,16 @@ class daoInscricao {
     
     public function inserirInscricao($nome, $email, $bi,$telefone, $id_curso) {
         try{
-            $stmt = $this->db->prepare("CALL sgu.inserirInscricao(:nome,:email,:bi,:telefone,:Id_curso)");
-            $stmt->bindparam(":nome",$nome);
-            $stmt->bindparam(":email",$email);
-            $stmt->bindparam(":bi",$bi);
-            $stmt->bindparam(":telefone",$telefone);
-            $stmt->bindparam(":id_curso",$id_curso);
+            $stmt = $this->db->prepare("insert into sgu.tb_inscricao(nome,email,bi,telefone,id_curso) values(:nomef,:emailf,:bif,:telefonef,:id_cursof)");
+            $stmt->bindparam(":nomef",$nome);
+            $stmt->bindparam(":emailf",$email);
+            $stmt->bindparam(":bif",$bi);
+            $stmt->bindparam(":telefonef",$telefone);
+            $stmt->bindparam(":id_cursof",$id_curso);
             $stmt->execute();
             ?>
             <script>
-             alert("Sucesso !");
+             alert("Sucesso Inserido!");
             </script>
             <?php
             return true;
@@ -51,5 +51,5 @@ class daoInscricao {
         }
     }
 }
-//$cc = new crudInscricao();
-//$cc->selectAll();
+//$cc = new daoInscricao();
+//$cc->inserirInscricao("teste", "teste@teste.com", "fsdf32fsf43fsdf4f", "9349434","EINF");
