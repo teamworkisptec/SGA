@@ -1,5 +1,7 @@
 
     <footer>
+        <script src="content/js1/jquery-3.3.1.js"></script> <!-- Jquery Mauro  -->
+        <script  src="content/js1/button.js"></script> <!-- Jquery Mauro  -->
         <!-- jquery
                     ============================================ -->
         <script src="content/js/vendor/jquery-1.12.4.min.js"></script>
@@ -43,5 +45,6 @@
         <script src="content/js/main.js"></script>
             <!-- tawk chat JS
                     ============================================ -->
-         <script src="content/js/tawk-chat.js"></script>
+        <script src="content/js/tawk-chat.js"></script>
+        
     </footer>

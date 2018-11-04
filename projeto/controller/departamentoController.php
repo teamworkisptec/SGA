@@ -20,11 +20,25 @@ class departamentoController {
         $this->daodep = new daoDepartamento();
     }
     
-    public function inserirDepartamento( $nome ) {
+    
+    public function inserirDepartamento($nome  ) {
+        if($nome!=NULL ){
+               $this->daodep->insertDepartamento($nome);
+        }
+        else{
+            ?>
+<script>alert("Campo Null!!!")</script>
+<?php
+        }
+        /**
+        if(isset($_POST['submitted-departamento'])){
+            $filterNome = filter_input(INPUT_POST, 'Nome');
+            $nome = $filterNome;
+            
+            
+        }
+         * **/
         
-        $this->daodep->insertDepartamento($nome);
         
     }
-
-    
 }

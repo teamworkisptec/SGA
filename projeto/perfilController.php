@@ -23,7 +23,7 @@ class perfilController {
     private $controllerAdmin = NULL;
     private $controllerInscr = NULL;
     private $controllerDepa = NULL;
-    
+            
     function __construct( ) {
         $this->controllerLogin = new LoginController();
         $this->controllerAdmin = new AdministrativoController();
@@ -46,6 +46,8 @@ class perfilController {
                 else if ($res->getPerfil()== 'admin'){
                     $admin = $this->controllerAdmin->buscarAdmin($id, $passe);
                     $inscritos = $this->controllerInscr->todosInscritos();
+                    $departamento = $this->controllerDepa;
+                    
                     include 'view/Administrativo.php';
                 }
                 else if ($res->getPerfil()== 'discen'){

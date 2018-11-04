@@ -36,9 +36,7 @@
 .carousel-item-prev.carousel-item-right {
   transform: translateX(0);
 
-  @supports (transform-style: preserve-3d) {
-    transform: translate3d(0, 0, 0);
-  }
+  
 }
 
 .carousel-item-next,

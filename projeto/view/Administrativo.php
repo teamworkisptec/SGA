@@ -17,7 +17,13 @@
                 <div class="left-custom-menu-adp-wrap comment-scrollbar" style="margin-top: 20%;">
                     <nav class="sidebar-nav left-sidebar-menu-pro">
                         <ul class="metismenu">
-                            
+                            <h1 style="margin-left: 25%; color: #006DF0; font-family: 'Roboto', sans-serif; font-size: 20px;">
+                                <?php echo $admin->getNome() ;?>
+                            </h1>
+                            <h1 style="margin-left: 10%; color: #006DF0; font-family: 'Roboto', sans-serif; font-size: 20px;">
+                                ADMINISTRATIVO
+                            </h1>
+                            <hr>
                         </ul>
                         
                         <ul class="metismenu" id="menu1">
@@ -277,7 +283,7 @@
                                             <ul id="myTabedu1" class="tab-review-design">
                                                 <li class="active"><a>CADASTRAR CURSO</a></li>
                                             </ul>
-                                            <form class="dropzone dropzone-custom" id="demo1-upload">
+                                            <form class="dropzone dropzone-custom" id="demo1-upload" method="post">
                                                 <div class="row">
                                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="margin-top: 2%;">
                                                         <div class="form-group">
@@ -295,7 +301,7 @@
                                                 </div>
                                                 <div class="form-row" style="margin-top: 2%;">
                                                     <div class="col-12">
-                                                        <button type="submit" class="btn btn-primary waves-effect waves-light">Inserir</button>
+                                                        <input type="button" class="btn btn-primary waves-effect waves-light" value="Inserir-curso">
                                                     </div>
                                                 </div>
                                             </form>
@@ -334,7 +340,7 @@
                                                 </div>
                                                 <div class="form-row" style="margin-top: 2%;">
                                                     <div class="col-12">
-                                                        <button type="submit" class="btn btn-primary waves-effect waves-light">Inserir</button>
+                                                        <input type="button" class="btn btn-primary waves-effect waves-light" value="Inserir-turma">
                                                     </div>
                                                 </div>
                                             </form>
@@ -404,12 +410,12 @@
                                             <ul id="myTabedu1" class="tab-review-design">
                                                 <li class="active"><a>CADASTRAR DEPARTAMENTO</a></li>
                                             </ul>
-                                            <form class="dropzone dropzone-custom"  action="#" id="demo1-upload">
+                                            <form class="dropzone dropzone-custom" id="demo1-upload" method="post">
                                                 <div class="row">
                                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="margin-top: 2%;">
                                                         <div class="form-group">
                                                             <label class="control-label" for="inputSuccess">Departamento:</label>
-                                                            <input name="departamento" type="text" class="form-control" placeholder="Digite o Departamento">
+                                                            <input id="nomeDep" name="nome" type="text" class="form-control" placeholder="Digite o Departamento">
                                                         </div>
                                                     </div>
                                                     <div class="col imagem">
@@ -418,10 +424,16 @@
                                                 </div>
                                                 <div class="form-row" >
                                                     <div class="col-12">
-                                                        <button class="btn btn-primary waves-effect waves-light">Inserir</button>
+                                                        <input type="button"  name="submitted-departamento" class="btn btn-primary waves-effect waves-light" value="Inserir-departamento" >
                                                     </div>
+                                                    
                                                 </div>
                                             </form>
+<script type="text/javascript" >
+          
+    
+    
+</script>
                                         </div>
                                     </div>
                                 </div>
