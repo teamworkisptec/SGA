@@ -20,6 +20,10 @@ class departamentoController {
         $this->daodep = new daoDepartamento();
     }
     
+    public function selecionarId($nome) {
+        $this->daodep->insertDepartamento($nome);
+    }
+    
     public function todosDepartamentos() {
         try{
             $res = $this->daodep->selectAll();

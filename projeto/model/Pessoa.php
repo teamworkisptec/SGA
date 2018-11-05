@@ -14,11 +14,10 @@ class Pessoa
     private $passe;
     
     
-    function __construct($nome, $email, $endereco, $pass) {
+    function __construct($nome, $email, $endereco) {
         $this->nome = $nome;
         $this->email = $email;
         $this->endereco = $endereco;
-        $this->pass = $pass;
     }
 
         /**

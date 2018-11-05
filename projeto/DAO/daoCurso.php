@@ -21,6 +21,23 @@ class daoCurso {
         $this->db = DbConnection::getInstance();
     }
     
+    public function insert($id, $curso, $departamento) {
+        try {
+            $stmt = $this->db->prepare("INSERT into sgu.tb_curso( id, id_departamento, nome)values( :idf, :departamentof, :cursof)");
+            $stmt->bindparam(":idf",$id);
+            $stmt->bindparam(":departamentof",$departamento);
+            $stmt->bindparam(":cursof",$curso);
+            $stmt->execute();
+            ?>
+            <script>
+             alert("Sucesso Inserido!");
+            </script>
+            <?php
+            return true;
+        } catch (Exception $ex) {
+            echo $ex->getMessage();
+        }
+    }
     
     public function selectAll () {
         try{

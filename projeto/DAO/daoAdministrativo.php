@@ -15,7 +15,7 @@ class daoAdministrativo {
             $stmt->bindparam(":nome",$nome);
             $stmt->bindparam(":email",$email);
             $stmt->bindparam(":passe",$passe);
-            $stmt->bindparam(":passe",$endereco);
+            $stmt->bindparam(":endereco",$endereco);
             $stmt->execute();
             return true;
         } catch (Exception $ex) {

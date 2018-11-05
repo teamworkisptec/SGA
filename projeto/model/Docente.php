@@ -12,10 +12,14 @@ class Docente extends Pessoa {
 
     private $status;
     private $id;
-
     /**
      * @return mixed
      */
+    
+    function __construct($nome, $email, $endereco) {
+        parent::__construct($nome, $email, $endereco);
+    }
+
     public function getId()
     {
         return $this->id;

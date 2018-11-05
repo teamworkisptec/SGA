@@ -16,6 +16,7 @@ require_once ('controller/LoginController.php');
 require_once ('controller/AdministrativoController.php');
 require_once ('controller/InscricaoController.php');
 require_once 'controller/departamentoController.php';
+require_once 'controller/CursoController.php';
 
 class perfilController {
     
@@ -23,12 +24,14 @@ class perfilController {
     private $controllerAdmin = NULL;
     private $controllerInscr = NULL;
     private $controllerDepa = NULL;
-            
+    private $controllerCurso = NULL;
+    
     function __construct( ) {
         $this->controllerLogin = new LoginController();
         $this->controllerAdmin = new AdministrativoController();
         $this->controllerInscr = new InscricaoController();
         $this->controllerDepa = new departamentoController();
+        $this->controllerCurso = new CursoController();
     }
 
     public function logar() {
@@ -47,7 +50,7 @@ class perfilController {
                     $admin = $this->controllerAdmin->buscarAdmin($id, $passe);
                     $inscritos = $this->controllerInscr->todosInscritos();
                     $departamentos = $this->controllerDepa->todosDepartamentos();
-                    
+                    $cursos = $this->controllerCurso->todosCursos();
                     include 'view/Administrativo.php';
                 }
                 else if ($res->getPerfil()== 'discen'){

@@ -24,6 +24,21 @@ class daoDepartamento {
             echo $ex->getMessage();
         }
     }
+    
+    public function selectByNome($nome ) {
+        try{
+            $stmt = $this->db->prepare("SELECT * FROM sgu.tb_departamentos where nome=:nomef");
+            $stmt->bindparam("nomef",$nome);
+            $stmt->execute();
+            $result = $stmt->fetch();
+            
+            $departamento = new Departamento($result['nome'], $result['id']);
+            return $departamento;
+        } catch (Exception $ex) {
+            echo $ex->getMessage();
+        }
+    }
+    
     public function insertDepartamento($nome){
         try{
             $stmt = $this->db->prepare("CALL sgu.inserirDepartamento(:nome);");

@@ -33,7 +33,7 @@ class Departamento
     /**
      * @param mixed $id_departamento
      */
-    public function setIdDepartamento($id)
+    public function setId($id)
     {
         $this->id = $id;
     }

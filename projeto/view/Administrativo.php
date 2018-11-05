@@ -245,6 +245,8 @@
                                                             <th scope="col">Email</th>
                                                             <th scope="col">Telefone</th>
                                                             <th scope="col">Curso</th>
+                                                            <th scope="col">  </th>
+                                                            <th scope="col">  </th>
                                                           </tr>
                                                         </thead>
                                                         <tbody>
@@ -254,13 +256,19 @@
                                                                 <td><?php echo $inscrito->getEmail();?></td>
                                                                 <td><?php echo $inscrito->getTelefone();?></td>
                                                                 <td><?php echo $inscrito->getCurso();?></td>
+                                                                <td><input id="Aprovarinscrito" type="button" class="btn-click btn btn-primary waves-effect waves-light"  value="Aprovar"></td>
+                                                                <td><input id="Reprovarinscrito" type="button" class="btn-click btn btn-primary waves-effect waves-light"  value="Reprovar"></td>
                                                             </tr>
                                                             <?php endforeach; ?>
                                                         </tbody>
                                                     </table>
                                                     <div class="form-row text-center">
                                                         <div class="col-12">
-                                                            <button type="submit" class="btn btn-primary waves-effect waves-light">Aprovar</button>
+                                                            <input id="Aprovarinscritos" type="button" class="btn-click btn btn-primary waves-effect waves-light"  value="Aprovar">
+                                                            <input id="Reprovarinscritos" type="button" class="btn-click btn btn-primary waves-effect waves-light"  value="Reprovar">
+                                                        </div>
+                                                        <div class="col-6">
+                                                            
                                                         </div>
                                                     </div>
                                                 </div>
@@ -288,7 +296,11 @@
                                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="margin-top: 2%;">
                                                         <div class="form-group">
                                                             <label class="control-label" for="inputSuccess">Curso:</label>
-                                                            <input name="curso" type="text" class="form-control" placeholder="Digite o Curso...">
+                                                            <input id="nomeCurso" name="curso" type="text" class="form-control" placeholder="Digite o Curso...">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label" for="inputSuccess">Curso ID:</label>
+                                                            <input id="idCurso" name="curso" type="text" class="form-control" placeholder="Digite o Curso...">
                                                         </div>
                                                         
                                                             
@@ -309,7 +321,7 @@
                                                 </div>
                                                 <div class="form-row" style="margin-top: 2%;">
                                                     <div class="col-12">
-                                                        <input type="button" class="btn btn-primary waves-effect waves-light" value="Inserir-curso">
+                                                        <input id="Inserir-curso" type="button" class="btn-click btn btn-primary waves-effect waves-light" value="Inserir-curso">
                                                     </div>
                                                 </div>
                                             </form>
@@ -330,16 +342,35 @@
                                             <ul id="myTabedu1" class="tab-review-design">
                                                 <li class="active"><a>CADASTRAR TURMA</a></li>
                                             </ul>
-                                            <form class="dropzone dropzone-custom" id="demo1-upload">
+                                            <form class="dropzone dropzone-custom" id="demo1-upload" method="POST">
                                                 <div class="row">
                                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="margin-top: 2%;">
                                                         <div class="form-group">
-                                                            <label class="control-label" for="inputSuccess">Curso:</label>
-                                                            <input name="curso" type="text" class="form-control" placeholder="Digite o Curso...">
+                                                            <label class="control-label" for="inputSuccess">Turma Nome:</label>
+                                                            <input id="turmaNome" name="turmaNome" type="text" class="form-control" placeholder="Digite Nome da Turma...">
                                                         </div>
                                                         <div class="form-group">
+                                                            <label class="control-label" for="inputSuccess">Turma Id:</label>
+                                                            <input id="turmaId" name="turmaId" type="text" class="form-control" placeholder="Digite ID da Turma...">
+                                                        </div>
+                                                       <div class="form-group">
+                                                           <label class="control-label" for="inputSuccess">Curso:</label>
+                                                           <select id="selCurso" class="form-control" required="" name="selDep">
+                                                                <option value="" selected="selected">    ----- </option>
+                                                                <?php foreach($cursos as $curso) {?>
+                                                                    <option value="<?php echo $curso->getId() ?>"><?php echo $curso->getNome(); ?></option>
+                                                                <?php } ?>
+                                                            </select>
+                                                            <span></span>   
+							</div>
+                                                        <div class="form-group">
                                                             <label class="control-label" for="inputSuccess">Periodo:</label>
-                                                            <input name="periodo" type="text" class="form-control" placeholder="Digite O Periodo...">
+                                                            <select id="periodo" class="form-control" required="" name="selDep">
+                                                                <option value="" selected="selected">    ----- </option>
+                                                                <option value="manha">Manha</option>
+                                                                <option value="tarde">Tarde</option>
+                                                                <option value="noite">Noite</option>
+                                                            </select>
                                                         </div>
                                                     </div>
                                                     <div class="col imagem">
@@ -348,7 +379,7 @@
                                                 </div>
                                                 <div class="form-row" style="margin-top: 2%;">
                                                     <div class="col-12">
-                                                        <input type="button" class="btn btn-primary waves-effect waves-light" value="Inserir-turma">
+                                                        <input id="Inserir-turma" type="button" class="btn btn-primary waves-effect waves-light" value="Inserir-turma">
                                                     </div>
                                                 </div>
                                             </form>
@@ -370,24 +401,20 @@
                                             <ul id="myTabedu1" class="tab-review-design">
                                                 <li class="active"><a>CADASTRAR DOCENTE</a></li>
                                             </ul>
-                                            <form class="dropzone dropzone-custom" id="demo1-upload">
+                                            <form class="dropzone dropzone-custom" id="demo1-upload" method="POST">
                                                 <div class="row">
                                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="margin-top: 2%;">
                                                         <div class="form-group">
                                                             <label class="control-label" for="inputSuccess">Nome Completo:</label>
-                                                            <input name="nome" type="text" class="form-control" placeholder="Digite o Nome Completo...">
+                                                            <input id="nomeDoc" name="nomeDoc" type="text" class="form-control" placeholder="Digite o Nome Completo...">
                                                         </div>
                                                         <div class="form-group">
                                                             <label class="control-label" for="inputSuccess">E-mail:</label>
-                                                            <input name="email" type="email" class="form-control" placeholder="Digite o Email...">
+                                                            <input id="emailDoc" name="emailDoc" type="email" class="form-control" placeholder="Digite o Email...">
                                                         </div>
                                                         <div class="form-group">
                                                             <label class="control-label" for="inputSuccess">Endereço:</label>
-                                                            <input name="endereço" type="text" class="form-control" placeholder="Digite o Endereço...">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label class="control-label" for="inputSuccess">Estado:</label>
-                                                            <input name="estado" type="text" class="form-control" placeholder="Digite o Estado...">
+                                                            <input id="enderecoDoc" name="enderecoDoc" type="text" class="form-control" placeholder="Digite o Endereço...">
                                                         </div>
                                                     </div>
                                                     <div class="col imagem">
@@ -396,7 +423,7 @@
                                                 </div>
                                                 <div class="form-row" style="margin-top: 2%;">
                                                     <div class="col-12">
-                                                        <button type="submit" class="btn btn-primary waves-effect waves-light">Inserir</button>
+                                                        <input id="Inserir-docente" type="button" class="btn btn-primary waves-effect waves-light" value="Inserir-docente">
                                                     </div>
                                                 </div>
                                             </form>
@@ -432,7 +459,7 @@
                                                 </div>
                                                 <div class="form-row" >
                                                     <div class="col-12">
-                                                        <input type="button"  name="submitted-departamento" class="btn btn-primary waves-effect waves-light" value="Inserir-departamento" >
+                                                        <input type="button" id="Inserir-departamento" name="submitted-departamento" class="btn-click btn btn-primary waves-effect waves-light" value="Inserir-departamento" >
                                                     </div>
                                                     
                                                 </div>
@@ -465,7 +492,7 @@
                                             </div>
                                             <div class="sparkline13-graph" style="margin-top: 2%;">
                                                 <div class="datatable-dashv1-list custom-datatable-overright">
-                                                    <table id="table" style="margin-top: 2%;" class="table table-hover table-dark" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true"
+                                                    <table id="tableMat" style="margin-top: 2%;" class="table table-hover table-dark" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true"
                                                         data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
                                                         <thead class="theadTab">
                                                             <tr>
@@ -500,6 +527,22 @@
                                                             </tr>
                                                         </tbody>
                                                     </table>
+                                                    <script>
+                                                        var table = document.getElementById("tableMat"),rIndex;
+                                                        for(var i = 1; i < table.rows.length; i++){
+                                                            table.rows[i].onclick = function(){
+                                                                rIndex = this.rowIndex;
+                                                                console.log(rIndex);
+                                                                
+                                                                document.getElementById("nomeMat").value = this.cells[0].innerHTML;
+                                                                document.getElementById("emailMat").value = this.cells[1].innerHTML;
+                                                                document.getElementById("cursoMat").value = this.cells[3].innerHTML;
+                                                                
+                                                            }
+                                                        }
+                                                        
+                                                    </script>
+                                                    
                                                     <div class="jumbotron">
                                                         <h3 style="color:#2289db; text-align: center;" >Dados Para A Matrícula</h3>
                                                         <hr>
@@ -508,11 +551,11 @@
                                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                                     <div class="form-group">
                                                                         <label class="control-label" for="inputSuccess">Nome:</label>
-                                                                        <input name="Nome" type="text" class="form-control" placeholder="Insira o Nome...">
+                                                                        <input id="nomeMat" name="Nome" type="text" class="form-control" placeholder="Insira o Nome...">
                                                                     </div>
                                                                     <div class="form-group">
                                                                         <label class="control-label" for="inputSuccess">E-mail:</label>
-                                                                        <input name="E-mail" type="email" class="form-control" placeholder="Insira o E-mail...">
+                                                                        <input id="emailMat" name="E-mail" type="email" class="form-control" placeholder="Insira o E-mail...">
                                                                     </div>
                                                                     <div class="form-group">
                                                                         <label class="control-label" for="inputSuccess">Ano:</label>
@@ -526,7 +569,7 @@
                                                                     </div>
                                                                     <div class="form-group">
                                                                         <label class="control-label" for="inputSuccess">Curso:</label>
-                                                                        <input name="Curso" type="text" class="form-control" placeholder="Insira o Curso...">
+                                                                        <input id="cursoMat" name="Curso" type="text" class="form-control" placeholder="Insira o Curso...">
                                                                     </div>
                                                                     <div class="form-group">
                                                                         <label class="control-label" for="inputSuccess">Turma:</label>
