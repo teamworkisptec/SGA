@@ -37,17 +37,17 @@ class daoInscricao {
     
     public function selectAll(){
         try{
-            $stmt = $this->db->prepare("SELECT * FROM sgu.vw_inscricao");
+            $stmt = $this->db->prepare("SELECT * FROM sgu.tb_inscricao");
             $stmt->execute();
             $result = $stmt->fetchAll();
             
             $inscritos = Array();
             foreach ($result as $inscrito) {
-                $inscritos[] = new Inscricao($inscrito['ID'], $inscrito['NOME'], $inscrito['BI'], $inscrito['EMAIL'], $inscrito['TELEFONE'], $inscrito['CURSO']);
+                $inscritos[] = new Inscricao($inscrito['id'], $inscrito['nome'], $inscrito['bi'], $inscrito['email'], $inscrito['telefone'], $inscrito['id_curso'],$inscrito['valida'],$inscrito['estado'],$inscrito['nota'],$inscrito['ano']);
             }
             return $inscritos;
         } catch (Exception $ex) {
-            echo $ex->getMessage();
+            echo "ERRO NA BD TIPO: ".$ex->getMessage();
         }
     }
 }

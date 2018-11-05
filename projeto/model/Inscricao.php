@@ -14,11 +14,13 @@ class Inscricao
     private $telefone;
     private $nota;
     private $id;
-
+    private $valida;
+    private $estado;
+    private $ano;
     /**
      * Inscricao constructor.
      */
-    public function __construct($id,$nome,$bi,$email,$telefone,$curso)
+    public function __construct($id,$nome,$bi,$email,$telefone,$curso,$valida,$estado,$ano,$nota)
     {
         $this->id = $id;
         $this->nome = $nome;
@@ -26,11 +28,41 @@ class Inscricao
         $this->email = $email;
         $this->telefone = $telefone;
         $this->curso = $curso;
+        $this->estado = $estado;
+        $this->nota = $nota;
+        $this->valida = $valida;
+        $this->ano = $ano;
     }
+    
 
     /**
      * @return mixed
      */
+    
+    function getValida() {
+        return $this->valida;
+    }
+
+    function getEstado() {
+        return $this->estado;
+    }
+
+    function getAno() {
+        return $this->ano;
+    }
+
+    function setValida($valida) {
+        $this->valida = $valida;
+    }
+
+    function setEstado($estado) {
+        $this->estado = $estado;
+    }
+
+    function setAno($ano) {
+        $this->ano = $ano;
+    }
+
     function getBi() {
         return $this->bi;
     }

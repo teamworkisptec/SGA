@@ -252,6 +252,7 @@
                                                         <tbody>
                                                             <?php foreach ($inscritos as $inscrito ):  ?>
                                                             <tr>
+                                                                
                                                                 <td><?php echo $inscrito->getNome();?></td>
                                                                 <td><?php echo $inscrito->getEmail();?></td>
                                                                 <td><?php echo $inscrito->getTelefone();?></td>
