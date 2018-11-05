@@ -9,33 +9,33 @@
 class Departamento
 {
     private $nome;
-    private $id_departamento;
+    private $id;
 
     /**
      * Departamento constructor.
      * @param $nome
      * @param $id_departamento
      */
-    public function __construct($nome, $id_departamento)
+    public function __construct($nome, $id)
     {
         $this->nome = $nome;
-        $this->id_departamento = $id_departamento;
+        $this->id = $id;
     }
 
     /**
      * @return mixed
      */
-    public function getIdDepartamento()
+    public function getId()
     {
-        return $this->id_departamento;
+        return $this->id;
     }
 
     /**
      * @param mixed $id_departamento
      */
-    public function setIdDepartamento($id_departamento)
+    public function setIdDepartamento($id)
     {
-        $this->id_departamento = $id_departamento;
+        $this->id = $id;
     }
 
     /**

@@ -290,10 +290,18 @@
                                                             <label class="control-label" for="inputSuccess">Curso:</label>
                                                             <input name="curso" type="text" class="form-control" placeholder="Digite o Curso...">
                                                         </div>
-                                                        <div class="form-group">
-                                                            <label class="control-label" for="inputSuccess">Departamento:</label>
-                                                            <input name="departamento" type="text" class="form-control" placeholder="Digite O Departamento...">
-                                                        </div>
+                                                        
+                                                            
+                                                       <div class="form-group">
+                                                           <select id="selDep" class="form-control" required="" name="selDep">
+                                                                <option value="" selected="selected">    ----- </option>
+                                                                <?php foreach($departamentos as $depar) {?>
+                                                                    <option value="<?php echo $depar->getId() ?>"><?php echo $depar->getNome(); ?></option>
+                                                                <?php } ?>
+                                                            </select>
+                                                            <span></span>   
+							</div>
+                                                        
                                                     </div>
                                                     <div class="col imagem">
                                                     <i class="fa fa-graduation-cap fa-9x FontIcon"></i>

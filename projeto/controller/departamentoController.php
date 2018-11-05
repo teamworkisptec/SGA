@@ -20,6 +20,14 @@ class departamentoController {
         $this->daodep = new daoDepartamento();
     }
     
+    public function todosDepartamentos() {
+        try{
+            $res = $this->daodep->selectAll();
+            return $res;
+        } catch (Exception $ex) {
+            $ex->getMessage();
+        }   
+    }
     
     public function inserirDepartamento($nome  ) {
         if($nome!=NULL ){
@@ -27,18 +35,9 @@ class departamentoController {
         }
         else{
             ?>
-<script>alert("Campo Null!!!")</script>
-<?php
+            <script>alert("Campo Null!!!")</script>
+            <?php
         }
-        /**
-        if(isset($_POST['submitted-departamento'])){
-            $filterNome = filter_input(INPUT_POST, 'Nome');
-            $nome = $filterNome;
-            
-            
-        }
-         * **/
-        
-        
     }
+    
 }

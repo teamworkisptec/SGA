@@ -46,7 +46,7 @@ class perfilController {
                 else if ($res->getPerfil()== 'admin'){
                     $admin = $this->controllerAdmin->buscarAdmin($id, $passe);
                     $inscritos = $this->controllerInscr->todosInscritos();
-                    $departamento = $this->controllerDepa;
+                    $departamentos = $this->controllerDepa->todosDepartamentos();
                     
                     include 'view/Administrativo.php';
                 }
