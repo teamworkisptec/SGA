@@ -17,13 +17,12 @@
                 <div class="left-custom-menu-adp-wrap comment-scrollbar" style="margin-top: 20%;">
                     <nav class="sidebar-nav left-sidebar-menu-pro">
                         <ul class="metismenu">
-                            <h1 style="margin-left: 25%; color: #006DF0; font-family: 'Roboto', sans-serif; font-size: 20px;">
-                                <?php echo $admin->getNome() ;?>
-                            </h1>
-                            <h1 style="margin-left: 10%; color: #006DF0; font-family: 'Roboto', sans-serif; font-size: 20px;">
-                                ADMINISTRATIVO
-                            </h1>
-                            <hr>
+                            <div class="app-sidebar_user text-center"><i class="fa fa-users"></i>
+                                <div>
+                                    <p class="app-sidebar_user-name"><a><?php echo $admin->getNome(); ?></a></p>
+                                    <p class="app-sidebar_user-designation"><a>Administrativo</a></p>
+                                </div>
+                            </div>
                         </ul>
                         
                         <ul class="metismenu" id="menu1">
@@ -31,7 +30,7 @@
                                 <a title="Inscritos" class="nav-link" id="Inscritos-tab" 
                                    data-toggle="pill" href="#Inscritos" role="tab" aria-controls="Inscritos" 
                                    aria-selected="false" aria-expanded="false">
-                                   <i class="fas fa-users FontIconMenu"></i> 
+                                   <i class="fa fa-users FontIconMenu"></i> 
                                     Inscritos
                                 </a>
                             </li>
@@ -62,13 +61,13 @@
                             <li>
                                 <a title="MatricularEstudante" class="nav-link" id="MatEst-tab" data-toggle="pill" 
                                    href="#MatEst" role="tab" aria-controls="MatEst" aria-selected="false" aria-expanded="false">
-                                    <i class="fas fa-pen-fancy FontIconMenu"></i>
+                                    <i class="fa fa-pen-fancy FontIconMenu"></i>
                                      Matricular Estudante
                                 </a>
                             </li>
                             <li>
                                 <a class="has-arrow" href="Atribuicao" aria-expanded="false">
-                                    <i class="fas fa-hand-pointer FontIconMenu"></i>
+                                    <i class="fa fa-hand-pointer FontIconMenu"></i>
                                      Atribuir
                                 </a>
                                 <ul class="submenu-angle" aria-expanded="false">
@@ -78,7 +77,7 @@
                             </li>
                             <li>
                                 <a title="EliminarFalta" href="#" aria-expanded="false">
-                                    <i class="fas fa-eraser FontIconMenu"></i>
+                                    <i class="fa fa-eraser FontIconMenu"></i>
                                      Eliminar Falta
                                 </a>
                             </li>
@@ -131,13 +130,13 @@
                                                 <a title="Inscritos" class="nav-link" id="Inscritos-tab" 
                                                    data-toggle="pill" href="#Inscritos" role="tab" aria-controls="Inscritos" 
                                                    aria-selected="false" aria-expanded="false">
-                                                   <i class="fas fa-users FontIconMenu"></i> 
+                                                   <i class="fa fa-users FontIconMenu"></i> 
                                                     Inscritos
                                                 </a>
                                             </li>
                                             <li>
                                                 <a class="has-arrow" href="#">
-                                                   <i class="fas fa-clipboard-list FontIconMenu"></i>
+                                                   <i class="fa fa-clipboard-list FontIconMenu"></i>
                                                     Cadastrar
                                                 </a>
                                                 <ul class="submenu-angle" aria-expanded="true">
@@ -161,13 +160,13 @@
                                             </li>
                                             <li>
                                                 <a title="MatricularEstudante" href="#" aria-expanded="false">
-                                                    <i class="fas fa-pen-fancy FontIconMenu"></i>
+                                                    <i class="fa fa-pen-fancy FontIconMenu"></i>
                                                      Matricular Estudante
                                                 </a>
                                             </li>
                                             <li>
                                                 <a class="has-arrow" href="Atribuicao" aria-expanded="false">
-                                                    <i class="fas fa-hand-pointer FontIconMenu"></i>
+                                                    <i class="fa fa-hand-pointer FontIconMenu"></i>
                                                      Atribuir
                                                 </a>
                                                 <ul class="submenu-angle" aria-expanded="false">
@@ -177,39 +176,12 @@
                                             </li>
                                             <li>
                                                 <a title="EliminarFalta" href="#" aria-expanded="false">
-                                                    <i class="fas fa-eraser FontIconMenu"></i>
+                                                    <i class="fa fa-eraser FontIconMenu"></i>
                                                      Eliminar Falta
                                                 </a>
                                             </li>
                                         </ul>
                                     </nav>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Mobile Menu end -->
-                <div class="breadcome-area">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <div class="breadcome-list single-page-breadcome">
-                                    <div class="row">
-                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                            <div class="breadcome-heading">
-                                                <form role="search" class="sr-input-func">
-                                                    <input type="text" placeholder="Search..." class="search-int form-control">
-                                                    <a href="#"><i class="fa fa-search"></i></a>
-                                                </form>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                            <ul class="breadcome-menu">
-                                                <li><a style="color: #006DF0;"><h1>Área Administrativa</h1></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -223,7 +195,16 @@
 
                         <!-- Inscritos -->    
                         <div class="tab-pane fade " id="Inscritos" role="tabpanel" aria-labelledby="Inscritos-tab">
-
+                            <main class="app-content">
+                                <div class="app-title">
+                                    <div>
+                                        <h1><i class="fa fa-users"></i>Inscritos</h1>
+                                    </div>
+                                    <ul class="app-breadcrumb breadcrumb side">
+                                        <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+                                        <li class="breadcrumb-item active">Inscritos</li>
+                                    </ul>
+                                </div>
                         <!-- Tabela Dos Inscritos -->
                         <div class="data-table-area mg-b-15">
                             <div class="container-fluid">
@@ -251,16 +232,17 @@
                                                         </thead>
                                                         <tbody>
                                                             <?php foreach ($inscritos as $inscrito ):  ?>
+                                                            <?php if($inscrito->getValida()=='emespera'){ ?>
                                                             <tr>
                                                                 
-                                                                <td><?php echo $inscrito->getNome();?></td>
+                                                                <td id="idInscrito"><?php echo $inscrito->getNome();?></td>
                                                                 <td><?php echo $inscrito->getEmail();?></td>
                                                                 <td><?php echo $inscrito->getTelefone();?></td>
                                                                 <td><?php echo $inscrito->getCurso();?></td>
                                                                 <td><input id="Aprovarinscrito" type="button" class="btn-click btn btn-primary waves-effect waves-light"  value="Aprovar"></td>
                                                                 <td><input id="Reprovarinscrito" type="button" class="btn-click btn btn-primary waves-effect waves-light"  value="Reprovar"></td>
                                                             </tr>
-                                                            <?php endforeach; ?>
+                                                            <?php } endforeach; ?>
                                                         </tbody>
                                                     </table>
                                                     <div class="form-row text-center">
@@ -279,10 +261,22 @@
                                 </div>
                             </div>
                         </div>
+                        </main>
                     </div>
 
                     <!-- Cadastrar Curso -->
                     <div class="tab-pane fade" id="Curso" role="tabpanel" aria-labelledby="Curso-tab">
+                        <main class="app-content">
+                                <div class="app-title">
+                                    <div>
+                                        <h1><i class="fa fa-clipboard-list"></i>Cadastrar</h1>
+                                    </div>
+                                    <ul class="app-breadcrumb breadcrumb side">
+                                        <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+                                        <li class="breadcrumb-item">Cadastrar</li>
+                                        <li class="breadcrumb-item active">Curso</li>
+                                    </ul>
+                                </div>
                         <!-- Single pro tab review Start-->
                         <div class="single-pro-review-area mt-t-30 mg-b-15">
                             <div class="container-fluid">
@@ -331,9 +325,21 @@
                                 </div>
                             </div>
                         </div>
+                        </main>
                     </div>
                     <!-- Cadastrar Turma -->
                     <div class="tab-pane fade" id="Turma" role="tabpanel" aria-labelledby="Turma-tab">
+                        <main class="app-content">
+                                <div class="app-title">
+                                    <div>
+                                        <h1><i class="fa fa-clipboard-list"></i>Cadastrar</h1>
+                                    </div>
+                                    <ul class="app-breadcrumb breadcrumb side">
+                                        <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+                                        <li class="breadcrumb-item">Cadastrar</li>
+                                        <li class="breadcrumb-item active">Turma</li>
+                                    </ul>
+                                </div>
                         <!-- Single pro tab review Start-->
                         <div class="single-pro-review-area mt-t-30 mg-b-15">
                             <div class="container-fluid">
@@ -389,10 +395,22 @@
                                 </div>
                             </div>
                         </div>
+                        </main>
                     </div>
 
                     <!-- Cadastrar Docente -->
                     <div class="tab-pane fade" id="Docente" role="tabpanel" aria-labelledby="Docente-tab">
+                        <main class="app-content">
+                                <div class="app-title">
+                                    <div>
+                                        <h1><i class="fa fa-clipboard-list"></i>Cadastrar</h1>
+                                    </div>
+                                    <ul class="app-breadcrumb breadcrumb side">
+                                        <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+                                        <li class="breadcrumb-item">Cadastrar</li>
+                                        <li class="breadcrumb-item active">Docente</li>
+                                    </ul>
+                                </div>
                         <!-- Single pro tab review Start-->
                         <div class="single-pro-review-area mt-t-30 mg-b-15">
                             <div class="container-fluid">
@@ -433,10 +451,22 @@
                                 </div>
                             </div>
                         </div>
+                        </main>
                     </div>
 
                     <!-- Cadastrar Departamento -->
                     <div class="tab-pane fade " id="Dep" role="tabpanel" aria-labelledby="Departamento-tab">
+                        <main class="app-content">
+                                <div class="app-title">
+                                    <div>
+                                        <h1><i class="fa fa-clipboard-list"></i>Cadastrar</h1>
+                                    </div>
+                                    <ul class="app-breadcrumb breadcrumb side">
+                                        <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+                                        <li class="breadcrumb-item">Cadastrar</li>
+                                        <li class="breadcrumb-item active">Departamento</li>
+                                    </ul>
+                                </div>
                         <!-- Single pro tab review Start-->
                         <div class="single-pro-review-area mt-t-30 mg-b-15">
                             <div class="container-fluid">
@@ -465,21 +495,26 @@
                                                     
                                                 </div>
                                             </form>
-<script type="text/javascript" >
-          
-    
-    
-</script>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        </main>
                     </div>
 
                     <!-- Matricular Estudante -->    
                     <div class="tab-pane fade" id="MatEst" role="tabpanel" aria-labelledby="MatEst-tab">
-
+                        <main class="app-content">
+                                <div class="app-title">
+                                    <div>
+                                        <h1><i class="fa fa-pen-fancy"></i>Matricular Estudante</h1>
+                                    </div>
+                                    <ul class="app-breadcrumb breadcrumb side">
+                                        <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+                                        <li class="breadcrumb-item active">Matricular Estudante</li>
+                                    </ul>
+                                </div>
                         <!-- Tabela Dos Inscritos -->
                         <div class="data-table-area mg-b-15">
                             <div class="container-fluid">
@@ -505,27 +540,18 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
+                                                            <?php foreach ($inscritos as $inscrito ):  ?>
+                                                            <?php if($inscrito->getValida()=='yes'){ ?>
                                                             <tr>
-                                                                <th>1</th>
-                                                                <td>Mark</td>
-                                                                <td>Otto</td>
-                                                                <td>@mdo</td>
-                                                                <td>@mdo</td>
+                                                                
+                                                                <td><?php echo $inscrito->getNome();?></td>
+                                                                <td><?php echo $inscrito->getEmail();?></td>
+                                                                <td><?php echo $inscrito->getTelefone();?></td>
+                                                                <td><?php echo $inscrito->getCurso();?></td>
+                                                                <td><?php echo $inscrito->getNota();?></td>
                                                             </tr>
-                                                            <tr>
-                                                                <th>2</th>
-                                                                <td>Jacob</td>
-                                                                <td>Thornton</td>
-                                                                <td>@fat</td>
-                                                                <td>@mdo</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th>3</th>
-                                                                <td>Larry the Bird</td>
-                                                                <td>@twitter</td>
-                                                                <td>@twitter</td>
-                                                                <td>@mdo</td>
-                                                            </tr>
+                                                            <?php } endforeach; ?>
+                                                            
                                                         </tbody>
                                                     </table>
                                                     <script>
@@ -537,7 +563,7 @@
                                                                 
                                                                 document.getElementById("nomeMat").value = this.cells[0].innerHTML;
                                                                 document.getElementById("emailMat").value = this.cells[1].innerHTML;
-                                                                document.getElementById("cursoMat").value = this.cells[3].innerHTML;
+                                                                
                                                                 
                                                             }
                                                         }
@@ -552,36 +578,73 @@
                                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                                     <div class="form-group">
                                                                         <label class="control-label" for="inputSuccess">Nome:</label>
-                                                                        <input id="nomeMat" name="Nome" type="text" class="form-control" placeholder="Insira o Nome...">
+                                                                        <input id="nomeMat" name="nomeMat" type="text" class="form-control" placeholder="Insira o Nome...">
                                                                     </div>
                                                                     <div class="form-group">
                                                                         <label class="control-label" for="inputSuccess">E-mail:</label>
-                                                                        <input id="emailMat" name="E-mail" type="email" class="form-control" placeholder="Insira o E-mail...">
+                                                                        <input id="emailMat" name="emailMat" type="email" class="form-control" placeholder="Insira o E-mail...">
                                                                     </div>
-                                                                    <div class="form-group">
-                                                                        <label class="control-label" for="inputSuccess">Ano:</label>
-                                                                        <input name="Ano" type="number" class="form-control" placeholder="Insira o Ano...">
-                                                                    </div>
+                                                                       
                                                                 </div>
                                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                                     <div class="form-group">
+                                                                        <label class="control-label" for="inputSuccess">Telefone:</label>
+                                                                        <input id="telefoneMat" name="telefoneMat" type="tel" class="form-control" placeholder="Insira o Telefone...">
+                                                                    </div>
+                                                                    <div class="form-group">
                                                                         <label class="control-label" for="inputSuccess">Endereço:</label>
-                                                                        <input name="Endereco" type="text" class="form-control" placeholder="Insira o Endereço...">
-                                                                    </div>
-                                                                    <div class="form-group">
-                                                                        <label class="control-label" for="inputSuccess">Curso:</label>
-                                                                        <input id="cursoMat" name="Curso" type="text" class="form-control" placeholder="Insira o Curso...">
-                                                                    </div>
-                                                                    <div class="form-group">
-                                                                        <label class="control-label" for="inputSuccess">Turma:</label>
-                                                                        <input name="Turma" type="text" class="form-control" placeholder="Insira a Turma...">
+                                                                        <input id="enderecoMat" name="enderecoMat" type="text" class="form-control" placeholder="Insira o Endereço...">
                                                                     </div>
                                                                 </div>
                                                             </div>
+                                                                
+                                                                
+                                                            <hr>
+                                                            <form id="add-department" action="#" class="add-department">
+                                                            <div class="row">
+                                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                    <div class="form-group">
+                                                                        <label class="control-label" for="inputSuccess">Curso:</label>
+                                                                        <select id="selMatCurso" name="cursoMat" class="form-control" required="" >
+                                                                            <option value="" selected="selected">    ----- </option>
+                                                                            <?php foreach($cursos as $curso) {?>
+                                                                                <option id="cursoMat" value="<?php echo $curso->getId() ?>"><?php echo $curso->getNome(); ?></option>
+                                                                            <?php } ?>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="control-label" for="inputSuccess">Semestre:</label>
+                                                                        <select id="selMatSemestre" name="semestreMat" class="form-control" required="" >
+                                                                            <option value="" selected="selected">    ----- </option>
+                                                                            
+                                                                        </select>
+                                                                    </div>
+                                                                       
+                                                                </div>
+                                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                    
+                                                                    <div class="form-group">
+                                                                        <label class="control-label" for="inputSuccess">Turma:</label>
+                                                                        <select id="selMatTurma" name="turmaMat" class="form-control" required="" >
+                                                                            <option value="" selected="selected">    ----- </option>
+                                                                            
+                                                                        </select>
+                                                                    </div>
+                                                                    
+                                                                    <div class="form-group">
+                                                                        <label class="control-label" for="inputSuccess">Horario:</label>
+                                                                        <select  name="horarioMat" class="form-control" required="" name="selDep">
+                                                                            <option value="" selected="selected">    ----- </option>
+                                                                            
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>   
+                                                                
                                                             <div class="row">
                                                                 <div class="col-lg-12">
                                                                     <div class="payment-adress" style="margin-top: 3%;">
-                                                                        <button type="submit" class="btn btn-primary waves-effect waves-light">Matricular</button>
+                                                                        <input id="Inserir-matricula" type="button" class="btn btn-primary waves-effect waves-light" value="Inserir-matricula">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -594,24 +657,13 @@
                                 </div>
                             </div>
                         </div>
+                        </main>
                     </div>
                 </div>
             </div>
         </div>
 
-                <!-- accordion End-->
-        <div class="footer-copyright-area">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="footer-copy-right">
-                            <p>Copyright © 2018. All rights reserved.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
-            </div>
         <?php
         include 'footer.php';
         ?>

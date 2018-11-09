@@ -6,72 +6,70 @@
  * Time: 23:17
  */
 
+/**
+ * Modification of Horario
+ *
+ * @author Montana
+ */
+
 class Horario
 {
     private $id;
-    private $horaInicio;
-    private $horaFim;
-
-    /**
-     * Horario constructor.
-     * @param $id
-     * @param $horaInicio
-     * @param $horaFim
-     */
-    public function __construct($id, $horaInicio, $horaFim)
-    {
+    private $id_turma;
+    private $id_disciplina;
+    private $id_horas;
+    private $semestre;
+    
+    function __construct($id, $id_turma, $id_disciplina, $id_horas, $semestre) {
         $this->id = $id;
-        $this->horaInicio = $horaInicio;
-        $this->horaFim = $horaFim;
+        $this->id_turma = $id_turma;
+        $this->id_disciplina = $id_disciplina;
+        $this->id_horas = $id_horas;
+        $this->semestre = $semestre;
     }
-
-    /**
-     * @return mixed
-     */
-    public function getId()
-    {
+    
+    function getId() {
         return $this->id;
     }
 
-    /**
-     * @param mixed $id
-     */
-    public function setId($id)
-    {
+    function getId_turma() {
+        return $this->id_turma;
+    }
+
+    function getId_disciplina() {
+        return $this->id_disciplina;
+    }
+
+    function getId_horas() {
+        return $this->id_horas;
+    }
+
+    function getSemestre() {
+        return $this->semestre;
+    }
+
+    function setId($id) {
         $this->id = $id;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getHoraInicio()
-    {
-        return $this->horaInicio;
+    function setId_turma($id_turma) {
+        $this->id_turma = $id_turma;
     }
 
-    /**
-     * @param mixed $horaInicio
-     */
-    public function setHoraInicio($horaInicio)
-    {
-        $this->horaInicio = $horaInicio;
+    function setId_disciplina($id_disciplina) {
+        $this->id_disciplina = $id_disciplina;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getHoraFim()
-    {
-        return $this->horaFim;
+    function setId_horas($id_horas) {
+        $this->id_horas = $id_horas;
     }
 
-    /**
-     * @param mixed $horaFim
-     */
-    public function setHoraFim($horaFim)
-    {
-        $this->horaFim = $horaFim;
+    function setSemestre($semestre) {
+        $this->semestre = $semestre;
     }
 
 
+
+    
+    
 }

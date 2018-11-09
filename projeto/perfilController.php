@@ -56,6 +56,10 @@ class perfilController {
                 else if ($res->getPerfil()== 'discen'){
                     //include '';
                 }
+                else{
+                    echo '<script >alert("Email ou Passe Errada");</script>';
+                    include 'index.php';
+                }
             }   
         }
     }
