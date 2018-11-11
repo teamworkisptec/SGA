@@ -11,7 +11,7 @@ class Pessoa
     private $nome;
     private $email;
     private $endereco;
-    private $passe;
+    private $pass;
     
     
     function __construct($nome, $email, $endereco) {

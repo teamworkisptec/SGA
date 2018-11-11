@@ -3,25 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/wamp/www/teamworkisptec/SGU/projeto/projeto/view/header.php</file>
-            <file>file:/C:/wamp/www/teamworkisptec/SGU/projeto/projeto/view/footer.php</file>
-            <file>file:/C:/wamp/www/teamworkisptec/SGU/projeto/projeto/controller/AdministrativoController.php</file>
-            <file>file:/C:/wamp/www/teamworkisptec/SGU/projeto/projeto/perfilController.php</file>
-            <file>file:/C:/wamp/www/teamworkisptec/SGU/projeto/projeto/view/Docente.php</file>
-            <file>file:/C:/wamp/www/teamworkisptec/SGU/projeto/projeto/view/Administrativo.php</file>
-            <file>file:/C:/wamp/www/teamworkisptec/SGU/projeto/projeto/controller/Controller.php</file>
-            <file>file:/C:/wamp/www/teamworkisptec/SGU/projeto/projeto/view/EnterLogin.php</file>
-            <file>file:/C:/wamp/www/teamworkisptec/SGU/projeto/projeto/DAO/daoInscricao.php</file>
-            <file>file:/C:/wamp/www/teamworkisptec/SGU/projeto/projeto/DAO/daoDepartamento.php</file>
-            <file>file:/C:/wamp/www/teamworkisptec/SGU/projeto/projeto/model/Pessoa.php</file>
-            <file>file:/C:/wamp/www/teamworkisptec/SGU/projeto/projeto/controller/LoginController.php</file>
-            <file>file:/C:/wamp/www/teamworkisptec/SGU/projeto/projeto/DAO/daoAdministrativo.php</file>
-            <file>file:/C:/wamp/www/teamworkisptec/SGU/projeto/projeto/DAO/daoLogin.php</file>
-            <file>file:/C:/wamp/www/teamworkisptec/SGU/projeto/projeto/model/Administrativo.php</file>
-            <file>file:/C:/wamp/www/teamworkisptec/SGU/projeto/projeto/controller/departamentoController.php</file>
-            <file>file:/C:/wamp/www/teamworkisptec/SGU/projeto/projeto/controller/inscricaoController.php</file>
-            <file>file:/C:/wamp/www/teamworkisptec/SGU/projeto/projeto/DAO/dbconfig.php</file>
-            <file>file:/C:/wamp/www/teamworkisptec/SGU/projeto/projeto/index.php</file>
+            <file>file:/C:/wamp/www/teamworkisptec/SGA/projeto/controller/InscricaoController.php</file>
+            <file>file:/C:/wamp/www/teamworkisptec/SGA/projeto/controller/Controller.php</file>
+            <file>file:/C:/wamp/www/teamworkisptec/SGA/projeto/index2.php</file>
+            <file>file:/C:/wamp/www/teamworkisptec/SGA/projeto/perfilController.php</file>
+            <file>file:/C:/wamp/www/teamworkisptec/SGA/projeto/controller/docenteController.php</file>
+            <file>file:/C:/wamp/www/teamworkisptec/SGA/projeto/content/js1/button.js</file>
+            <file>file:/C:/wamp/www/teamworkisptec/SGA/projeto/ajax.php</file>
+            <file>file:/C:/wamp/www/teamworkisptec/SGA/projeto/DAO/daoDocente.php</file>
+            <file>file:/C:/wamp/www/teamworkisptec/SGA/projeto/model/Administrativo.php</file>
+            <file>file:/C:/wamp/www/teamworkisptec/SGA/projeto/model/Departamento.php</file>
+            <file>file:/C:/wamp/www/teamworkisptec/SGA/projeto/DAO/daoInscricao.php</file>
         </group>
     </open-files>
 </project-private>

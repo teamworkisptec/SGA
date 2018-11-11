@@ -43,8 +43,9 @@
         <!-- main JS
                     ============================================ -->
         <script src="content/js/main.js"></script>
-            <!-- tawk chat JS
-                    ============================================ -->
-        <script src="content/js/tawk-chat.js"></script>
+
+
+        <!-- script ajax dos botões -->
+        <script src="content/js1/Action_btn.js"></script>
         
     </footer>

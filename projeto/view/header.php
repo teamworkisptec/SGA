@@ -6,6 +6,8 @@
     <title>SGU | Sistema de Gestão Universitária</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Estilização da página --->
+    <link rel="stylesheet" href="content/css/Style_Admin.css">
     <!-- favicon
 		============================================ -->
     <link rel="shortcut icon" type="image/x-icon" href="content/img/favicon.ico">
@@ -18,6 +20,7 @@
     <!-- Bootstrap CSS
 		============================================ -->
     <link rel="stylesheet" href="content/css/font-awesome.min.css">
+    <link rel="stylesheet" href="content/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" 
           integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <!-- owl.carousel CSS

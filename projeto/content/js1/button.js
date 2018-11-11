@@ -52,19 +52,11 @@ $( document ).ready(function() {
         });
     });
     $("#Aprovarinscrito").click(function(){
-        
-        var clickBtnValue = $(this).val();
-        
-        var nomeDoc = $("#nomeDoc").val();
-        var emailDoc = $("#emailDoc").val();
-        var enderecoDoc = $("#enderecoDoc").val();
-        
-        var ajaxurl = 'ajax.php',
-        data =  {'action': clickBtnValue, 'nome':nomeDoc,'email':emailDoc,'endereco':enderecoDoc};
-        $.post(ajaxurl, data, function (response) {
-            
-            alert("!!! "+ response );
-        });
+
+       var $linha = $(this).empty("tr");
+
+
+
     });
     $("#Reprovarinscrito").click(function(){
         
