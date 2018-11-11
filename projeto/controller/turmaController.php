@@ -26,6 +26,16 @@ class turmaController {
         } catch (Exception $ex) {
             echo $ex->getMessage();
             return false;
+        } 
+    }
+    
+    public function selecionarTurmaPorCurso($id_curso) {
+        try{
+            $res = $this->daoturma->selectByCurso($id_curso);
+            return $res;
+        } catch (Exception $ex) {
+            echo $ex->getMessage();
+            return false;
         }
         
     }

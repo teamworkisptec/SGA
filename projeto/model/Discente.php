@@ -8,12 +8,19 @@
 
 include_once "Pessoa.php";
 
-class Aluno extends Pessoa
+class Discente extends Pessoa
 {
-    private $anoCurso;
+    
     private $id;
+    private $curso;
+    
+    function __construct($id, $curso,$nome, $email, $endereco) {
+        parent::__construct($nome, $email, $endereco);
+        $this->id = $id;
+        $this->curso = $curso;
+    }
 
-    /**
+            /**
      * @return mixed
      */
     public function getId()

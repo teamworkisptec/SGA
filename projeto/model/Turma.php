@@ -9,18 +9,23 @@
 class Turma
 {
     private $id;
-    private $periodo;
     private $nome;
     private $id_curso;
+    private $periodo;
+    private $ano;
             
-    
-    function __construct($id, $nome, $periodo, $id_curso) {
+    function __construct($id, $nome, $id_curso, $periodo, $ano) {
         $this->id = $id;
-        $this->periodo = $periodo;
         $this->nome = $nome;
         $this->id_curso = $id_curso;
+        $this->periodo = $periodo;
+        $this->ano = $ano;
     }
     
+    function getId() {
+        return $this->id;
+    }
+
     function getNome() {
         return $this->nome;
     }
@@ -29,30 +34,34 @@ class Turma
         return $this->id_curso;
     }
 
-    function getAnocurso() {
-        return $this->anocurso;
-    }
-
-    function setNome($nome) {
-        $this->nome = $nome;
-    }
-    
-    function getId() {
-        return $this->id;
-    }
-
     function getPeriodo() {
         return $this->periodo;
+    }
+
+    function getAno() {
+        return $this->ano;
     }
 
     function setId($id) {
         $this->id = $id;
     }
 
+    function setNome($nome) {
+        $this->nome = $nome;
+    }
+
+    function setId_curso($id_curso) {
+        $this->id_curso = $id_curso;
+    }
+
     function setPeriodo($periodo) {
         $this->periodo = $periodo;
     }
-    
+
+    function setAno($ano) {
+        $this->ano = $ano;
+    }
+
 
 
 

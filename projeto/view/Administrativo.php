@@ -15,10 +15,25 @@
                     <p>Olá</p>
                     <p> <?php echo "20180002";?> </p>
                 </div>
+<<<<<<< HEAD
                 <hr>
                 <div class="left-custom-menu-adp-wrap comment-scrollbar" style="margin-top:2%;  ">
                     <nav class="sidebar-nav left-sidebar-menu-pro" style="background-color: #0c1923;" >
                         <ul class="metismenu" id="menu1" style="background-color: #0c1923;" >
+=======
+                <div class="left-custom-menu-adp-wrap comment-scrollbar" style="margin-top: 20%;">
+                    <nav class="sidebar-nav left-sidebar-menu-pro">
+                        <ul class="metismenu">
+                            <div class="app-sidebar_user text-center"><i class="fa fa-users"></i>
+                                <div>
+                                    <p class="app-sidebar_user-name"><a><?php echo $admin->getNome(); ?></a></p>
+                                    <p class="app-sidebar_user-designation"><a>Administrativo</a></p>
+                                </div>
+                            </div>
+                        </ul>
+                        
+                        <ul class="metismenu" id="menu1">
+>>>>>>> 5d0394d2b49d82860f4f8c88798e772877b7b218
                             <li>
                                 <a title="Inscritos" class="nav-link" id="Inscritos-tab" 
                                    data-toggle="pill" href="#Inscritos" role="tab" aria-controls="Inscritos" 
@@ -213,7 +228,10 @@
                                                         </thead>
                                                         <tbody>
                                                             <?php foreach ($inscritos as $inscrito ):  ?>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5d0394d2b49d82860f4f8c88798e772877b7b218
                                                             <?php if($inscrito->getValida()=='emespera'){ ?>
                                                             <tr>
                                                                 
@@ -531,7 +549,11 @@
                                                                 <td><?php echo $inscrito->getEmail();?></td>
                                                                 <td><?php echo $inscrito->getTelefone();?></td>
                                                                 <td><?php echo $inscrito->getCurso();?></td>
+<<<<<<< HEAD
                                                                 <td><?php echo $inscrito->getNota() ;?></td>
+=======
+                                                                <td><?php echo $inscrito->getNota();?></td>
+>>>>>>> 5d0394d2b49d82860f4f8c88798e772877b7b218
                                                             </tr>
                                                             <?php } endforeach; ?>
                                                             
@@ -546,7 +568,7 @@
                                                                 
                                                                 document.getElementById("nomeMat").value = this.cells[0].innerHTML;
                                                                 document.getElementById("emailMat").value = this.cells[1].innerHTML;
-                                                                document.getElementById("cursoMat").value = this.cells[3].innerHTML;
+                                                                
                                                                 
                                                             }
                                                         }
@@ -561,36 +583,77 @@
                                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                                     <div class="form-group">
                                                                         <label class="control-label" for="inputSuccess">Nome:</label>
-                                                                        <input id="nomeMat" name="Nome" type="text" class="form-control" placeholder="Insira o Nome...">
+                                                                        <input id="nomeMat" name="nomeMat" type="text" class="form-control" placeholder="Insira o Nome...">
                                                                     </div>
                                                                     <div class="form-group">
                                                                         <label class="control-label" for="inputSuccess">E-mail:</label>
-                                                                        <input id="emailMat" name="E-mail" type="email" class="form-control" placeholder="Insira o E-mail...">
+                                                                        <input id="emailMat" name="emailMat" type="email" class="form-control" placeholder="Insira o E-mail...">
                                                                     </div>
-                                                                    <div class="form-group">
-                                                                        <label class="control-label" for="inputSuccess">Ano:</label>
-                                                                        <input name="Ano" type="number" class="form-control" placeholder="Insira o Ano...">
-                                                                    </div>
+                                                                       
                                                                 </div>
                                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                                     <div class="form-group">
+                                                                        <label class="control-label" for="inputSuccess">Telefone:</label>
+                                                                        <input id="telefoneMat" name="telefoneMat" type="tel" class="form-control" placeholder="Insira o Telefone...">
+                                                                    </div>
+                                                                    <div class="form-group">
                                                                         <label class="control-label" for="inputSuccess">Endereço:</label>
-                                                                        <input name="Endereco" type="text" class="form-control" placeholder="Insira o Endereço...">
-                                                                    </div>
-                                                                    <div class="form-group">
-                                                                        <label class="control-label" for="inputSuccess">Curso:</label>
-                                                                        <input id="cursoMat" name="Curso" type="text" class="form-control" placeholder="Insira o Curso...">
-                                                                    </div>
-                                                                    <div class="form-group">
-                                                                        <label class="control-label" for="inputSuccess">Turma:</label>
-                                                                        <input name="Turma" type="text" class="form-control" placeholder="Insira a Turma...">
+                                                                        <input id="enderecoMat" name="enderecoMat" type="text" class="form-control" placeholder="Insira o Endereço...">
                                                                     </div>
                                                                 </div>
                                                             </div>
+                                                                
+                                                                
+                                                            <hr>
+                                                            <form id="add-department" action="#" class="add-department">
+                                                            <div class="row">
+                                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                    <div class="form-group">
+                                                                        <label class="control-label" for="inputSuccess">Curso:</label>
+                                                                        <select id="selMatCurso" name="cursoMat" class="form-control" required="" >
+                                                                            <option value="" selected="selected">    ----- </option>
+                                                                            <?php foreach($cursos as $curso) {?>
+                                                                                <option id="cursoMat" value="<?php echo $curso->getId() ?>"><?php echo $curso->getNome(); ?></option>
+                                                                            <?php } ?>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="control-label" for="inputSuccess">Semestre:</label>
+                                                                        <select id="selMatSemestre" name="semestreMat" class="form-control" required="" >
+                                                                            <option value="" selected="selected">    ----- </option>
+                                                                            
+                                                                        </select>
+                                                                    </div>
+                                                                       
+                                                                </div>
+                                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                    
+                                                                    <div class="form-group">
+                                                                        <label class="control-label" for="inputSuccess">Turma:</label>
+                                                                        <select id="selMatTurma" name="turmaMat" class="form-control" required="" >
+                                                                            <option value="" selected="selected">    ----- </option>
+                                                                            
+                                                                        </select>
+                                                                    </div>
+                                                                    
+                                                                    <div class="form-group">
+                                                                        <label class="control-label" for="inputSuccess">Horario:</label>
+                                                                        <select  name="horarioMat" class="form-control" required="" name="selDep">
+                                                                            <option value="" selected="selected">    ----- </option>
+                                                                            
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>   
+                                                                
                                                             <div class="row">
                                                                 <div class="col-lg-12">
                                                                     <div class="payment-adress" style="margin-top: 3%;">
+<<<<<<< HEAD
                                                                         <button type="submit" class="btn btn-success">Matricular</button>
+=======
+                                                                        <input id="Inserir-matricula" type="button" class="btn btn-primary waves-effect waves-light" value="Inserir-matricula">
+>>>>>>> 5d0394d2b49d82860f4f8c88798e772877b7b218
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -610,7 +673,10 @@
         </div>
 
         </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5d0394d2b49d82860f4f8c88798e772877b7b218
         <?php
         include 'footer.php';
         ?>

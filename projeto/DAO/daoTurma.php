@@ -32,12 +32,29 @@ class daoTurma {
             $stmt->bindparam(":periodof",$periodo);
             $stmt->execute();
             
-             echo 'Inserida Turma !!!';
+            echo 'Inserida Turma !!!';
             return true;
         } catch (Exception $ex) {
             
             echo 'ERRO BD! Tipo: '.$ex->getMessage();
             return false;
+        }
+    }
+    
+    public function selectByCurso($id_curso){
+        try{
+            $stmt = $this->db->prepare("SELECT * FROM sgu.tb_turma WHERE id_curso=:id_curso");
+            $stmt->bindparam(":id_curso",$id_curso);
+            $stmt->execute();
+            $result = $stmt->fetchAll();
+            
+            $turmas = Array();
+            foreach ($result as $turma) {
+                $turmas[] = new Turma($turma['id'], $turma['nome'], $turma['id_curso'], $turma['periodo'], $turma['ano']);
+            }
+            return $turmas;
+        } catch (Exception $ex) {
+            echo "ERRO NA BD TIPO: ".$ex->getMessage();
         }
     }
 }
